@@ -1,7 +1,0 @@
-{
-  "name": "meuapp",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
