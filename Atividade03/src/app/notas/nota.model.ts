@@ -6,5 +6,4 @@ export interface Nota {
     a3: string;
     edad: string;
     media: string;
-
 } 

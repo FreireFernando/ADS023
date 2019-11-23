@@ -1,12 +1,14 @@
-import { Nota } from './nota.model';
-import { NotasPage } from './notas.page';
 import { Injectable } from '@angular/core';
+import { Nota } from './nota.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotasService {
- private notas: Nota[] = [
+
+  constructor() { }
+
+  private notas: Nota[] = [
     {
       disciplina: 'ADS023 - Programação para Dispositivos Móveis',
       a1: '5,0',
@@ -25,8 +27,10 @@ export class NotasService {
       media: '5,0'
     },
   ];
+
   getNotas() {
     return [...this.notas];
   }
-  constructor() { }
+
+ 
 }

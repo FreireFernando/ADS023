@@ -1,0 +1,55 @@
+#!/bin/bash
+# Adicione um novo remote; pode cham�-lo de "upstream":
+
+git remote add upstream https://github.com/usuario/projeto.git
+
+# Obtenha todos os branches deste novo remote,
+# como o upstream/master por exemplo:
+
+git fetch upstream
+
+# Certifique-se de que voc� est� no branch master:
+
+git checkout master
+
+# Reescreva o seu branch master, de forma que os seus commits
+# que n�o est�o no projeto original apare�am, e que os seus
+# commits fiquem no topo da lista:
+
+git rebase upstream/master
+
+# Se voc� n�o quiser reescrever o hist�rico do seu branch master
+# (talvez porque algu�m j� o tenha clonado) ent�o voc� deve
+# substituir o �ltimo comando por um
+
+git merge upstream/master
+
+# No entanto, para fazer com que futuros pull requests fiquem o mais
+# limpos poss�vel, � uma boa ideia fazer o rebase.
+
+# Se voc� fez o rebase do seu branch a partir de upstream/master, talvez
+# voc� precise for�ar um push para o seu pr�prio reposit�rio do Github.
+# Voc� pode fazer isso com:
+
+git push -f origin master
+
+# Voc� vai precisar fazer isso com o -f apenas na primeira vez que voc�
+# faz um rebase.
+
+git status
+git add .
+git commit -m ""
+git push origin master
+
+npm install @capacitor/cli
+
+
+ionic generate
+ionic generate page
+ionic generate interface
+ionic generate service
+ionic generate page contact
+ionic generate component contact/form
+ionic generate component login-form --change-detection=OnPush
+ionic generate directive ripple --skip-import
+ionic generate service api/user
